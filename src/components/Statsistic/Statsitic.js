@@ -1,12 +1,13 @@
-export const Statistic = () => {
-    return (
-      <div>
-        <h1>Please leave feedback</h1>
-        <button>Good: 2</button>
-        <button>Neutral:3</button>
-    
-        </div>
-    
-    );
-  };
-  
+export const Statistic = ({ countTotal, quantity, countPositive }) => {
+  const { good, neutral, bad } = quantity;
+  return (
+    <div>
+      <h2>Statistics</h2>
+      <p>Good: {good}</p>
+      <p>Neutral:{neutral}</p>
+      <p>Bad:{bad}</p>
+      <p>Total: {countTotal(good, neutral, bad)}</p>
+      <p>Positivefeedback: {countPositive(good, neutral, bad)}%</p>
+    </div>
+  );
+};

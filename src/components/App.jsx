@@ -4,21 +4,30 @@ import { Statistic } from './Statsistic/Statsitic';
 
 export class App extends Component {
   state = {
-    good: 1,
-    neutral: 1,
-    bad: 1,
+    good: 3,
+    neutral: 2,
+    bad: 2,
   };
-  countTotalFeedback = () => {
-    this.setState(prevState => ({
-      countTotalFeedback: prevState + this.state,
-    }));
+
+  countTotalFeedback = (a, b, c) => {
+    const totalFeedback = a + b + c;
+    return totalFeedback;
+  };
+  countPositiveFeedbackPercentage = (a, b, c) => {
+    const totalPercentage = (a + b + c) / 100;
+    const positivePercentage = Math.round(a / totalPercentage);
+    return positivePercentage;
   };
 
   render() {
     return (
       <div>
         <Feedback quantity={this.state} />
-        <Statistic />
+        <Statistic
+          countTotal={this.countTotalFeedback}
+          quantity={this.state}
+          countPositive={this.countPositiveFeedbackPercentage}
+        />
       </div>
     );
   }
