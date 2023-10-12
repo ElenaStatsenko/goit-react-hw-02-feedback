@@ -1,9 +1,9 @@
 export const Statistic = () => {
     return (
       <div>
-        <h1>Please leave feedback</h1>
-        <button>Good: 2</button>
-        <button>Neutral:3</button>
+        <h1>Statistics</h1>
+        <p>Good: 2</p>
+        <p>Neutral:3</p>
     
         </div>
     

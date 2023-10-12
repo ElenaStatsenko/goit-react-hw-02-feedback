@@ -1,4 +1,4 @@
-export const Feedback = () => {
+export const Feedback = ({good, neutral, bad}) => {
     return (
       <div>
         <h1>Please leave feedback</h1>
