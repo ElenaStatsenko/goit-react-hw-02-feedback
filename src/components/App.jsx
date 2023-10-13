@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { Feedback } from './Feedback/Feedback';
+import { FeedbackOptions } from './Feedback/Feedback';
 import { Statistic } from './Statsistic/Statsitic';
-
+import { SectionTitle } from './Title/SectionTitle';
 export class App extends Component {
   state = {
     good: 3,
@@ -22,7 +22,8 @@ export class App extends Component {
   render() {
     return (
       <div>
-        <Feedback quantity={this.state} />
+        <SectionTitle/>
+        <FeedbackOptions quantity={this.state} />
         <Statistic
           countTotal={this.countTotalFeedback}
           quantity={this.state}
