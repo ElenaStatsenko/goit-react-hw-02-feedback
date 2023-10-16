@@ -18,12 +18,19 @@ export class App extends Component {
     const positivePercentage = Math.round(a / totalPercentage);
     return positivePercentage;
   };
+  handleLeaveFeedback = (options) => {
+
+    this.setStatse((prevState) => ({
+      [options]: prevState[options]+ 1
+    }));
+  }
 
   render() {
     return (
       <div>
-        <SectionTitle/>
-        <FeedbackOptions quantity={this.state} />
+        <SectionTitle title={'Please leave feedback'}/>
+        <FeedbackOptions quantity={this.state} options={Object.keys(this.state)} onLeaveFeedback={this.handleLeaveFeedback}/>
+        <SectionTitle title={'Statistics'}/>
         <Statistic
           countTotal={this.countTotalFeedback}
           quantity={this.state}
