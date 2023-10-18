@@ -1,12 +1,9 @@
-
-export const SectionTitle = ({title}) => {
-  console.log(title)
-    return (
-      <div>
-        <h1>{title}</h1>
-        
-        </div>
-    
-    );
-  };
+export const SectionTitle = ({ title, children }) => {
   
+  return (
+    <div>
+      <h1>{title}</h1>
+      {children}
+    </div>
+  );
+};
