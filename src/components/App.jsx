@@ -22,8 +22,9 @@ export class App extends Component {
   render() {
     return (
       <div>
-        <SectionTitle/>
+        <SectionTitle title={'Please leave feedback'}/>
         <FeedbackOptions quantity={this.state} />
+        <SectionTitle title ={'Statistics'}/>
         <Statistic
           countTotal={this.countTotalFeedback}
           quantity={this.state}
