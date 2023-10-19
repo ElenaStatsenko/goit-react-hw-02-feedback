@@ -47,7 +47,7 @@ export class App extends Component {
         <FeedbackOptions quantity={this.state} options={optionsKey} onLeaveFeedback={this.handleLeaveFeedback}/>
        </SectionTitle >
         <SectionTitle title={'Statistics'} quantity={this.state}>
-         {this.optionsKey>0 ?(<Statistic
+         {this.optionsKey > 0 ?( <Statistic
           countTotal={this.countTotalFeedback}
           quantity={this.state}
           countPositive={this.countPositiveFeedbackPercentage}/>) 
