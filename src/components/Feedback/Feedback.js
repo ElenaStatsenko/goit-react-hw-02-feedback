@@ -1,9 +1,14 @@
-export const FeedbackOptions = ({ options, onLeaveFeedback }) => (
-  <div>
-    {options.map(option => (
-      <button key={option} onClick={() => onLeaveFeedback(option)}>
-        {option}
-      </button>
-    ))}
-  </div>
-);
+import { nanoid } from 'nanoid';
+export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
+  const optionsKeys = Object.keys(options);
+  console.log(optionsKeys);
+  return (
+    <ul>
+      {optionsKeys.map(optionsKey => (
+        <button key={nanoid()} onClick={() => onLeaveFeedback(optionsKey)}>
+          {optionsKey}
+        </button>
+      ))}
+    </ul>
+  );
+};
