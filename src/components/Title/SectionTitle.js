@@ -1,11 +1,13 @@
-import { Statistic } from "components/Statsistic/Statsitic";
-import { FeedbackOptions } from "components/Feedback/Feedback";
-export const SectionTitle = ({title}) => {
-    return (
-      <div>
-        <h2>{title}</h2>
-        </div>
-    
-    );
-  };
+
   
+
+export const SectionTitle = ({ title, children }) => {
+  
+  return (
+    <div>
+      <h1>{title}</h1>
+      {children}
+    </div>
+  );
+};
+
